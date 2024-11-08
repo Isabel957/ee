@@ -1,0 +1,41 @@
+.c-error {
+    min-height: calc(100vh - 229px);
+    @include mq($from: tablet){
+        min-height: calc(100vh - 254px);
+    }
+    &__wrapper {
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        @include mq($from: tablet) {
+            padding-top: 80px;
+        }
+
+    }
+
+
+    &__title{
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0;
+        @include mq($from: desktop) {
+            font-size: 100px;
+        }
+    }
+    &__text {
+        font-size: 22px;
+    }
+    &__button {
+        background-color: $color-red;
+        color: $color-white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 15px 20px;
+        border-radius: 16px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+}

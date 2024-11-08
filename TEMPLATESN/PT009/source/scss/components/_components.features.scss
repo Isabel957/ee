@@ -1,0 +1,38 @@
+.c-features {
+    margin-top: 36px;
+    text-align: center;
+    &__list {
+        display:inline-block;
+        flex-wrap: wrap;
+        padding-left: 25px;
+        text-align: center;
+        @include mq($from: desktop) {
+            display: flex;
+            text-align: left;
+        }
+        &-item {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 15px;
+            @include mq($from: desktop) {
+                width: calc(33.33% - 10px);
+                margin-bottom: 20px;
+            }
+        }
+
+        &-text {
+            width: 183px;
+            margin-left: 8px;
+            font-weight: 600;
+            text-align: left;
+            @include mq($from: desktop) {
+                width: 170px;
+            }
+        }
+        &-image {
+            width: 52px;
+            height: auto;
+            
+        }
+    }
+}

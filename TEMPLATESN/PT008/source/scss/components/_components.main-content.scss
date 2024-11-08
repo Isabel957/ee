@@ -1,0 +1,7 @@
+.c-main-content {
+    padding-top: 60px;
+    @include mq($from: tablet) {
+        padding-top: 90px;
+    }
+
+}

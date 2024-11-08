@@ -1,0 +1,78 @@
+include ../includes/config
+include ../includes/helpers
+.c-form-header
+    picture.c-form-header__banner
+        source(media='(min-width: 700px)', srcset='images/components/hero/hero-form-lg.webp, images/components/hero/hero-form-lg@2x.webp 2x', type='image/webp')
+        img.c-form-header____img(src='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==', alt='Smartphone showing results of quotes for car insurance', width=1, height=1)
+    .c-form-header__container.o-wrapper.o-wrapper--large
+        h2.c-form-header__title START YOUR QUOTE!
+        h3.c-form-header__title.c-form-header__title--product Product:
+            input.c-form-header__title_input(readonly type="text" name="product-name" value="{product-name}")
+.c-page-quote
+    .c-page-quote__container.o-wrapper.o-wrapper--large 
+        form.c-page-quote__form.c-page-quote-form.js-form(action='{url-rater}', method='post')
+            input(type="hidden" name="type_insurance" value="{type_insurance}")
+            .c-page-quote-form__item.c-page-quote-form__item_break
+                label.c-page-quote-form__label(for='form-gender') Gender
+                select#form-gender.c-page-quote-form__select.js-valid-select(name='lead[gender]', required)
+                    option(value='', disabled, selected) Select
+                    option(value='Male') Male
+                    option(value='Female') Female
+                    option(value='NonBinary') Non Binary
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for='form-fname') First Name
+                input#form-fname.c-page-quote-form__input.js-only-letters.js-valid-first-name(type='text', name='lead[first_name]', required)
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for='form-lname') Last Name
+                input#form-lname.c-page-quote-form__input.js-only-letters.js-valid-last-name(type='text', name='lead[last_name]', required)
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for='form-email') Email
+                input#form-email.c-page-quote-form__input.js-valid-email(type='email', name='lead[email]', required)
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for='form-phone') Phone Number
+                input#form-phone.c-page-quote-form__input.js-only-phone.js-valid-phone(type='tel', name='lead[phone]', maxlength='12', required)
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for="form-address") Street Address
+                input.c-page-quote-form__input(id="form-address" type="text" name="lead[street]" data-validate-field="address" required="required")
+            
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for='form-apt') Apt/Suite
+                input#form-apt.c-page-quote-form__input(type='text', name='lead[apt]')
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for="form-zipcode") ZIP CODE
+                input.c-page-quote-form__input.js-valid-zipcode.js-only-numbers(value="{zipcode}" id="form-zipcode" type="tel" onfocusout="getCity()" name="lead[zipcode]" maxlength="5" data-validate-field="zipcode" required="required")
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for='form-cityState') City, State
+                input#form-cityState.c-page-quote-form__input.js-only-letters(type='text', name='city', readonly, value='{city}')
+            .c-page-quote-form__item
+                label.c-page-quote-form__label(for="form-insured") Are you currently Insured?
+                select.c-page-quote-form__select#form-insured(name="coverage[current_recent_carrier]" data-validate-field="insured" required="")
+                    option(value="" disabled="" selected="") Select
+                    option(value="No") No
+                    option(value="Yes") Yes
+            
+            .c-page-quote-form__legal-text#comunication-consent-text
+                p By clicking Submit, I agree to the #[strong InsureOne Insurance] #[a(href=brand.privacyPolicy target='_blank') Privacy Policy] and #[a(href=brand.termsOfUse target='_blank') Terms of Use], and I consent to #[strong InsureOne] or their successors contacting me with offers about their services. I agree that such contact may occur via automated system or pre-recorded message and I understand giving consent to contact is not required for any purchase. I also give my express written consent to be contacted at the mobile phone number provided above for marketing purposes by call, text, or automated telephone dialing system, including with an artificial or prerecorded voice, which may leave a message. Message and data rate may apply. Message frequency varies. Text HELP for help and STOP to cancel at any time. I understand that I am providing this consent even if my telephone number is currently listed on a federal, state, internal, or corporate Do-Not-Call list. I understand that I do not have to agree to receive these types of calls or text messages as a condition of purchasing any goods or services. This site is protected by reCAPTCHA and the #[a(href='https://policies.google.com/privacy' target='_blank') Google Privacy Policy] and #[a(href='https://policies.google.com/terms' target='_blank') Terms of Use apply].
+            .c-page-quote-form__controls
+                    button.c-page-quote-form__submit.c-page-quote-form__control.js-submit-button(type='submit')
+                        span Submit
+                        img(src='images/components/hero/loading.svg' alt='Loading' width='20' height='20')
+script.
+    function getCity() {
+
+        var zipcode = document.getElementById("form-zipcode").value ;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open('GET', "https://www.confiejarvis.com/thor/get/"+zipcode+".json", true);
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4) {
+                if(xmlhttp.status == 200) {
+                    var obj = JSON.parse(xmlhttp.responseText);                        
+                    document.getElementById("form-cityState").value = obj.data.City +", "+ obj.data.State; 
+                }else{
+                    document.getElementById("form-cityState").value = "";  
+                }
+            }
+        };
+        xmlhttp.send(null);
+    }
+        

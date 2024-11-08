@@ -1,0 +1,46 @@
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+
+$inuit-wrapper-width-small: 895px;
+$inuit-wrapper-width: 1000px;
+$inuit-wrapper-width-large: 1200px;
+$inuit-wrapper-width-full: 100%;
+$inuit-wrapper-padding: 20px;
+
+/**
+ * Page-level constraining and wrapping elements.
+ */
+
+.o-wrapper {
+    padding-right: $inuit-wrapper-padding;
+    padding-left:  $inuit-wrapper-padding;
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: $inuit-wrapper-width;
+
+    &--small {
+        max-width: $inuit-wrapper-width-small;
+    }
+
+    &--large {
+        max-width: $inuit-wrapper-width-large;
+    }
+
+    &--full {
+        max-width: $inuit-wrapper-width-full;
+    }
+
+    &--flush {
+        padding-left: 0;
+        padding-right: 0;
+    } 
+
+    &-body {
+        max-width: 1600px;
+        margin: 0 auto;
+        @include mq($from: 1640px) {
+            box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+        }
+    }
+}

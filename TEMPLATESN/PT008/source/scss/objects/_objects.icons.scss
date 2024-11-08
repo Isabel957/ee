@@ -1,0 +1,19 @@
+///* ========================================================================
+//   #ICONS
+//   ======================================================================== */
+
+.o-icon {
+    display: inline-block;
+    line-height: 0.6;
+    
+    > svg {
+        display: inline-block;
+        font-size: inherit;
+        width: 1em;
+        height: 1em;
+        overflow: hidden;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+    }
+}

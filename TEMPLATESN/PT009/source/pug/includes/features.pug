@@ -1,0 +1,25 @@
+include ../includes/config
+include ../includes/helpers
+mixin feature(img, text)
+    li.c-features__list-item.o-list-bare__item
+        img.lazyload.c-features__list-image(src='images/components/features/'+img+'.svg', alt='', aria-hidden='true', width=52, height=52, loading='lazy')
+        p.c-features__list-text=text
+
+section.c-section
+    .o-wrapper.o-wrapper--small
+        h2.c-section__title Can I Get a Discount for Car Insurance?
+        .c-section__content
+            .s-cms-content
+                p Drivers can save money on their car insurance if they take advantage of every possible discount available.
+                p Examples of discounts include:
+            .c-features
+                ul.c-features__list.o-list-bare
+                    +feature('anti-theft', 'Installing anti-theft equipment')
+                    +feature('good-driver', 'Good driver discount')
+                    +feature('student', 'Student discount')
+                    +feature('multi-car', 'Multi-car discount')
+                    +feature('military', 'Military discount')
+                    +feature('multi-policy', 'Multi-policy discount')
+                    +feature('mature', 'Mature, retired, or senior discount')
+                    +feature('going', 'Going paperless')
+                    +feature('paying', 'Paying entire bill upfront')

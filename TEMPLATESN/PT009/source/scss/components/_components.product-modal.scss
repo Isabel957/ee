@@ -1,0 +1,191 @@
+.c-products-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 20px;
+    z-index: 110;
+    padding: 50px 20px 30px;
+    width: calc(100% - 40px);
+    max-width: 960px;
+    @include mq($from: tablet) {
+        display: flex;
+        gap: 0 20px;
+    }
+    @include mq($from: desktop) {
+        gap: 0 36px;
+        padding: 50px 65px;
+        align-items: center;
+    }
+    
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 15, 15, 0.42);
+        z-index: 100;
+    }
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: $color-primary;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        @include mq($from: desktop) {
+            right: 30px;
+        }
+    }
+
+    &__pic {
+        display: none;
+        min-width: 270px;
+        border-radius: 10px;
+        overflow: hidden;
+        @include mq($from: tablet) {
+            display: block;
+        }
+        @include mq($from: desktop) {
+            min-width: 325px;
+            height: 280px;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        @include mq($from: tablet) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 0;
+        @include mq($from: desktop) {
+            font-size: 36px;
+            line-height: 1.11;
+        }
+
+        strong {
+            color: $color-primary;
+        }
+    }
+
+    &__form {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px 0;
+        @include mq($from: desktop) {
+            margin-top: 28px;
+            grid-template-columns: 180px 278px;
+            gap: 16px
+        }
+    }
+
+    &__item {
+        &:first-of-type {
+            @include mq($from: desktop) {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        margin-bottom: 4px;
+        font-size: 16px;
+    }
+
+    &__select, &__input {
+        height: 54px;
+        width: 100%;
+        display: block;
+        border: 1px solid #ADBFDE;
+        border-radius: 8px;
+        padding: 0 12px;
+        font-size: 16px;
+        color: #424646;
+        resize: none;
+        @include mq($from: desktop) {
+            height: 58px;
+            font-size: 20px;
+        }
+    }
+
+    &__input {
+        padding: 17px 12px;
+        overflow: hidden;
+    }
+
+    &__select {
+        optgroup {
+            font-weight: 600;
+        }
+    }
+
+    &__controls {
+        @include mq($from: desktop) {
+            padding-top: 28px;
+        }
+    }
+
+    &__submit {
+        background-color: $color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+        @include mq($from: desktop) {
+            height: 58px;
+            font-size: 24px;
+        }
+
+        img {
+            display: none;
+            width: 20px;
+            height: auto;
+            @include mq($from: desktop) {
+                width: 30px;
+            }
+
+            .js-form--loading & {
+                display: inline-block;
+            }
+        }
+    }
+
+    label.js-form-error {
+        font-weight: 600;
+        font-size: 14px;
+        color: $color-red;
+        width: 200%;
+        display: inline-block;
+    }
+}
+
+.js-products-modal{
+    display: none;
+}

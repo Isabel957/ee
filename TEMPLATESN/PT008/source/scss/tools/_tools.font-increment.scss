@@ -1,0 +1,20 @@
+///* ========================================================================
+//   #FONT-INCREMENT
+//   ======================================================================== */
+
+// Mixin to increment font size in breakpoints
+
+@mixin font-increment($initial-font-size, $final-font-size) {
+    $plus: round( math.div($final-font-size - $initial-font-size, 3));
+    font-size: $initial-font-size;
+    @content;
+    @include mq($from: tablet) {
+        font-size: $initial-font-size + $plus;
+    }
+    @include mq($from: tablet-landscape) {
+        font-size: $initial-font-size + $plus*2;
+    }
+    @include mq($from: desktop) {
+        font-size: $final-font-size;
+    }
+}

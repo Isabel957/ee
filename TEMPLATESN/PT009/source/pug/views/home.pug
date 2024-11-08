@@ -1,0 +1,18 @@
+include ../includes/config
+doctype html
+html(lang=language)
+    head
+        include ../includes/head-index
+        include ../includes/tag-manager-head
+
+    body.o-wrapper-body
+        include ../includes/tag-manager-body
+        include ../includes/header
+        
+        main.c-main-content
+            include ../includes/hero
+            include ../includes/choose
+            include ../includes/companies
+        include ../includes/footer
+
+        include ../includes/scripts

@@ -1,0 +1,110 @@
+
+include ../includes/config
+include ../includes/helpers
+.c-hero.c-hero--multiple#hero
+    picture.c-hero__pic
+        source(media='(min-width: 700px)', srcset='images/components/hero/hero-lg.webp, images/components/hero/hero-lg@2x.webp 2x', type='image/webp')
+        img.c-hero__img(src='images/components/hero/hero-sm.webp', srcset='images/components/hero/hero-sm@2x.webp 2x' alt='Smartphone showing results of quotes for car insurance', width=360, height=175)
+    .c-hero__wrapper.o-wrapper.o-wrapper--large
+        h1.c-hero__title Cobertura total. Una sola fuente.
+        p.c-hero__text Todas sus necesidades de seguro en un solo lugar. 
+        .c-hero__content
+            form.c-hero-form.js-form(action='{form-lp}', method='post')
+                fieldset.c-hero-form__content
+                    legend.c-hero-form__title Elija un producto: 
+                    .c-hero-form__radios
+                        .c-hero-form__radio
+                            input.u-hidden-visually.c-hero-form__radio-input#productTypeCar(type='radio', name='productType', required, value='A')
+                            label.c-hero-form__radio-label(for='productTypeCar') 
+                                +iconSvg('icon-auto', 'c-hero-form__radio-icon')
+                                span.c-hero-form__radio-text Auto
+                        .c-hero-form__radio
+                            input.u-hidden-visually.c-hero-form__radio-input#productTypeHome(type='radio', name='productType', value='H')
+                            label.c-hero-form__radio-label(for='productTypeHome') 
+                                +iconSvg('icon-home', 'c-hero-form__radio-icon')
+                                span.c-hero-form__radio-text Casa
+                        .c-hero-form__radio
+                            input.u-hidden-visually.c-hero-form__radio-input#productTypeRenters(type='radio', name='productType', required, value='R')
+                            label.c-hero-form__radio-label(for='productTypeRenters') 
+                                +iconSvg('icon-renters', 'c-hero-form__radio-icon')
+                                span.c-hero-form__radio-text Inquilinos
+                        .c-hero-form__radio
+                            input.u-hidden-visually.c-hero-form__radio-input#productTypeCommercial(type='radio', name='productType', value='CI')
+                            label.c-hero-form__radio-label(for='productTypeCommercial') 
+                                +iconSvg('icon-commercial', 'c-hero-form__radio-icon')
+                                span.c-hero-form__radio-text Comercial
+                        .c-hero-form__radio
+                            input.u-hidden-visually.c-hero-form__radio-input#productTypeOther(type='radio', name='productType', value='O')
+                            label.c-hero-form__radio-label(for='productTypeOther') 
+                                +iconSvg('icon-other', 'c-hero-form__radio-icon')
+                                span.c-hero-form__radio-text Otro
+                        .c-hero-form__radio-error
+                .c-hero-form__controls
+                    .c-hero-form__item
+                        label.c-hero-form__label(for='#zipcode') Código postal
+                        textarea.c-hero-form__input.c-hero-form__zipcode.js-valid-zipcode.js-only-numbers#zipcode(type='text', name=form.zipcode.name maxlength='5', minlength='3', required, autocomplete='postal-code', inputmode='numeric', aria-label='Enter you zip code')
+                    //input(type='hidden' name='media_code' value='{media-code}')
+                    //input(type='hidden' name='contact_phone' value='{phone-number}')
+                    button.c-hero-form__submit(type='submit')
+                        span Comience a cotizar
+                        img(src='images/components/hero/loading.svg', alt='Loading', width='20', height='20')
+                //-button.c-hero-form__more-products.js-modal-products-open(aria-expanded='false', aria-controls='productsModal', type='button') I want to see more products →
+    //- #productsModal.js-products-modal
+    //-     .c-products-modal
+    //-         button.c-products-modal__close.js-modal-products-close(aria-expanded='false', aria-controls='productsModal', aria-label='Close modal'): +iconSvg('icon-close', false, false, 'Close')
+    //-         picture.c-products-modal__pic
+    //-             source(media='(min-width: 700px)', srcset='images/components/hero/modal.webp')
+    //-             img.c-products-modal__img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=', alt='', aria-hidden='true', loading='lazy', width=1, height=1)
+    //-         .c-products-modal__content
+    //-             h2.c-products-modal__title Select Other Insurance #[strong Products]
+    //-             form.c-products-modal__form.js-form(action='{url-rater}', method='post')
+    //-                 .c-products-modal__item 
+    //-                     label.c-products-modal__label(for='modalProduct') Selet a Product or Service
+    //-                     select.c-products-modal__select#modalProdcut(name='productType')
+    //-                         optgroup(label='Vehicle and Recreational')
+    //-                             option(value='') Auto
+    //-                             option(value='') Motorcycle
+    //-                             option(value='') Antique and Classic Car
+    //-                             option(value='') RV/Trailer
+    //-                             option(value='') Boat
+    //-                             option(value='') ATV
+    //-                             option(value='') Snowmobile
+    //-                         optgroup(label='Home and Property')
+    //-                             option(value='') Homeowners
+    //-                             option(value='') Renters
+    //-                             option(value='') Landlord
+    //-                             option(value='') Flood
+    //-                             option(value='') Umbrella/Excess Liability
+    //-                             option(value='') Jewelry/Fine Arts/Valuables
+    //-                         optgroup(label='Commercial')
+    //-                             option(value='') Business Owner Policy
+    //-                             option(value='') Commercial Package
+    //-                             option(value='') Commercial Auto
+    //-                             option(value='') Commercial Property
+    //-                             option(value='') General Liability
+    //-                             option(value='') Commercial Umbrella
+    //-                             option(value='') Workers Compensation
+    //-                             option(value='') Management Liability
+    //-                             option(value='') Bonds
+    //-                         optgroup(label='Employee Benefits')
+    //-                             option(value='') Medical
+    //-                             option(value='') Dental
+    //-                             option(value='') Vision
+    //-                             option(value='') Group Life
+    //-                             option(value='') Disability
+    //-                             option(value='') Voluntary Worksite
+    //-                         optgroup(label='Health')
+    //-                             option(value='') Medicare
+    //-                             option(value='') Marketplace Benefits
+    //-                         optgroup(label='Other Products')
+    //-                             option(value='') Roadside Assistance
+    //-                             option(value='') Cosmetic Bundle
+    //-                             option(value='') Maintenance Bundle
+    //-                 .c-products-modal__item 
+    //-                     label.c-products-modal__label(for='modalZipcode') Zip Code
+    //-                     textarea.c-products-modal__input.js-valid-zipcode(type='text', name=form.zipcode.name, maxlength='5', minlength='3', required, autocomplete='postal-code', inputmode='numeric', aria-label='Enter you zip code')
+    //-                 .c-products-modal__controls 
+    //-                     button.c-products-modal__submit(type='submit')
+    //-                         span Begin My Quote
+    //-                         img(src='images/components/hero/loading.svg', alt='Loading', width='20', height='20')
+    //-     .c-products-modal__overlay.js-products-modal-overlay

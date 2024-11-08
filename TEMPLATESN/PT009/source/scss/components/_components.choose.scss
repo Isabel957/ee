@@ -1,0 +1,83 @@
+.c-choose{
+    padding: 0px 0 0 0;
+    @include mq($from: desktop) {
+        padding: 60px 0 0 0;
+    }
+    &__ul{
+        max-width: 300px;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        @include mq($from: desktop) {
+            display: flex;
+            gap: 38px;
+            max-width: initial;
+        }
+    }
+    &__li{
+        @include mq($until: desktop) {
+            padding: 0 0 24px 0;
+            
+        }
+        @include mq($from: desktop) {
+            width: 260px;
+        }
+        img{
+            @include mq($until: desktop) {
+                height: 90px;
+                width: 90px;
+            }
+        }
+        &:first-child{
+            h2{
+                @include mq($from: desktop) {
+                    padding: 0 45px;
+                }
+            }
+            
+        }
+        &:last-child{
+            @include mq($until: desktop) {
+                padding: 0 0 0px 0;
+                
+            }
+        }
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 16px;
+        margin: 0;
+    }
+    &__title{
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.08;
+        font-size: 22px;
+        margin: 0 0 16px 0;
+        @include mq($from: tablet) {
+            margin: 0 0 36px 0;
+            font-size: 30px;
+        }
+        @include mq($from: desktop) {
+            font-size: 36px;
+        }
+    }
+    &__subtitle{
+        color: $color-black;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        padding: 0 25px;
+        line-height: normal;
+        br {
+            display: none;
+        }
+        @include mq($from: desktop) {
+            font-size: 18px;
+           br {
+            display: block;
+           }
+        }
+    }
+}

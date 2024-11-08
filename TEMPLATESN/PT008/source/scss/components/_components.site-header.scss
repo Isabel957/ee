@@ -1,0 +1,149 @@
+.c-header {
+    background-color: #fff;
+    padding: 14px 0;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    z-index: 100;
+    @include mq($from: tablet) {
+        padding: 23px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        //justify-content: space-between;
+    }
+
+    &__brand {
+        width: 106px;
+       //margin-right: 0;
+        position: relative;
+        margin-right: 24px;
+        &::after {
+            content: "";
+            height: 23px;
+            width: 1px;
+            background-color: rgba(125, 125, 125, .3);
+            right: -13px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            @include mq($from: tablet){
+                height: 41px;
+            }
+        }
+        @include mq($from: tablet) {
+            width: 204px;
+        }
+
+        a, img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    }
+    &__logo--omni{
+        width: 80px;
+        height: auto;
+        
+        &--small {
+            width: 100px;
+        }
+        @include mq($from: tablet) {
+            width: 160px;
+        }
+       
+        
+    }
+}
+.c-phone-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #000;
+    margin-left: auto;
+    margin-right: 0;
+    &__icon {
+        color: $color-white;
+        font-size: 28px;
+        transition: color 0.2s linear;
+        display: none;
+        background-color: $color-secondary;
+        width: 45px;
+        height: 45px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        @include mq($from: tablet) {
+            display: flex;
+        }
+        @include mq($from: tablet-landscape) {
+            //font-size: 38px;
+        }
+        
+    }
+
+    &:hover &__icon {
+        background-color: darken($color-primary, 3%);
+        transition: background-color 0.2s linear;
+    }
+
+    &__content {
+        margin-left: 6px;
+    }
+
+    &__text {
+        font-weight: 600;
+        line-height: 1.14;
+        font-size: 14px;
+        @include mq($from: tablet) {
+            font-size: 15px;
+        }
+        @include mq($from: tablet-landscape) {
+            font-size: 16px;
+        }
+        @include mq($from: desktop) {
+            br {
+                display: none;
+            }
+        }
+        &--desktop {
+            display: none;
+            @include mq($from: tablet) {
+                display: block;
+            }
+        }
+        &--mobile {
+            background-color: $color-secondary;
+            color: $color-white;
+            padding: 7px 12px;
+            border-radius: 78px;
+            font-weight: 700;
+            font-size: 16px;
+            @include mq($from: tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__number {
+        color: $color-black;
+        display: none;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: -2px;
+        line-height: 1;
+        @include mq($from: desktop) {
+            display: block;
+        }
+    }
+}

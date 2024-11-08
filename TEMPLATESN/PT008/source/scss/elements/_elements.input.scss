@@ -1,0 +1,20 @@
+
+/* ==========================================================================
+   #INPUT
+   ========================================================================== */
+
+input, select {
+    font-family: inherit;
+    @include placeholder(#666);
+}
+
+select {
+    padding-right: 40px;
+    background-position: calc(100% - 20px) center;
+    background-size: 15px;
+    cursor: pointer;
+
+    &::-ms-expand {
+        display: none;
+    }
+}

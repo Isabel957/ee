@@ -1,0 +1,6 @@
+mixin iconSvg(icon, clas, hidden='true', title)
+    span.o-icon(class=clas)
+        svg(aria-hidden=(hidden == 'true' ? 'true' : false) focusable='false', role='img')
+            if title
+                title=title 
+            use(xlink:href='images/icons/icons.svg#'+icon)

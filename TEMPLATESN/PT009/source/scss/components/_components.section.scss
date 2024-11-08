@@ -1,0 +1,30 @@
+.c-section {
+    padding: 21.5px 0;
+    background-color: #fff;
+
+    @include mq($from: tablet) {
+        padding: 40px 0;
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.08;
+        font-size: 22px;
+        @include mq($from: tablet) {
+            font-size: 30px;
+        }
+        @include mq($from: desktop) {
+            font-size: 36px;
+        }
+        
+       
+        + .c-section__content {
+            margin-top: 24px;
+
+            @include mq($from: tablet) {
+               margin-top: 16px;
+            }
+        }   
+    }
+}

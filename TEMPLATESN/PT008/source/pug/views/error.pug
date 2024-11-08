@@ -1,0 +1,16 @@
+include ../includes/config
+doctype html
+html(lang=language)
+    head
+        include ../includes/head
+        include ../includes/tag-manager-head
+
+    body.o-wrapper-body
+        include ../includes/tag-manager-body
+        include ../includes/header
+        
+        main.c-main-content
+            include ../includes/error-message
+        include ../includes/footer
+
+        include ../includes/scripts

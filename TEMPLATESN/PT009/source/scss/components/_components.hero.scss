@@ -1,0 +1,373 @@
+.c-hero {
+    padding-bottom: 15px;
+    position: relative;
+    @include mq($from: tablet) {
+        padding-bottom: 30px;
+    }
+    @include mq($from: desktop) {
+        padding-bottom: 82px;
+    }
+
+    &__pic {
+        display: block;
+        height: 175px;
+        width: 100%;
+        position: absolute;
+        //box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
+        @include mq($from: tablet) {
+            height: 100%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: top right;
+        overflow: hidden;
+    }
+
+    &__wrapper {
+        position: relative;
+        padding-top: 41px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include mq($from: tablet) {
+            padding-top: 24px;
+        }
+        @include mq($from: desktop) {
+            padding-top: 104px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        max-width: 63%;
+        font-size: 22px;
+        line-height: 1.12;
+        font-weight: 700;
+        @include mq($from: tablet) {
+            font-size: 38px;
+            max-width: 68%;
+        }
+        @include mq($from: desktop) {
+            font-size: 48px;
+        }
+        br{
+            @include mq($from: desktop) {
+                display: none;
+            }
+        }
+
+        .c-hero--multiple & {
+            @include mq($until: tablet) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    &__text {
+        margin: 8px 0 0 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.12;
+        max-width: 225px;
+        @include mq($from: tablet) {
+            font-size: 22px;
+            max-width: initial;
+        }
+        @include mq($from: desktop) {
+            font-size: 28px;
+            max-width: none;
+        }
+        br{
+            @include mq($from: tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        margin: 41px auto 0;
+        padding: 20px 0;
+        border-radius: 20px;
+        max-width: 360px;
+
+        @include mq($from: tablet) {
+            margin-top: 25px;
+            padding: 0;
+            max-width: none;
+        }
+    }
+
+    &-form {
+        @include mq($from: desktop) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px 0;
+        }
+
+        &__content {
+            border: 0;
+            margin: 0;
+            display: block;
+            width: 100%;
+            padding: 0;
+            max-width: 250px;
+            margin: auto;
+            @include mq($from: tablet) {
+                max-width: initial;
+            }
+        }
+
+        &__title {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.38;
+            text-align: center;
+            width: 100%;
+            font-weight: 600;
+
+            @include mq($from: tablet) {
+                text-align: left;
+                margin-bottom: 8px;
+            }
+        }
+
+        &__label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        &__radios {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+
+            @include mq($from: tablet) {
+                margin-top: 0;
+                gap: 0 10px;
+            }
+            .c-hero--multiple & {
+                //justify-content: center;
+
+                @include mq($from: tablet) {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        &__radio {
+            max-width: 120px;
+            width: 50%;
+
+            @include mq($from: tablet) {
+                max-width: 120px;
+            }
+
+            &--multiple {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+                @include mq($from: desktop) {
+                    width: calc(100% - 169px);
+                }
+
+                .c-hero-form__radio {
+                    width: calc(50% - 5px);
+                    @include mq($from: desktop) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-label {
+                background: #fff;
+                display: inline-flex;
+                width: 100%;
+                gap: 4px;
+                border: 3px solid transparent;
+                border-radius: 8px;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 18px 16px;
+                color: #000;
+                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+                height: 100%;
+
+                @include mq($from: desktop) {
+                    padding: 11px 18px 15px;
+                    
+                }
+
+                .c-hero-form__radio-input:checked+& {
+                    border: 3px solid $color-primary;
+                }
+
+                .is-keyboard-pressed .c-hero-form__radio-input:focus-within+& {
+                    outline: 2px solid #FF6200;
+                }
+            }
+
+            &-icon {
+                font-size: 42px;
+                color: $color-secondary;
+            }
+
+            &-text {
+                text-align: center;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            &-error {
+                width: 100%;
+            }
+        }
+
+        &__item {
+            width: 100%;
+            .c-hero--multiple & {
+                width: 126px;
+            }
+
+            @include mq($from: desktop) {
+                width: 155px;
+                max-width: none;
+                margin: 0;
+                .c-hero--multiple & {
+                    width: 160px;
+                }
+            }
+        }
+
+        &__input {
+            color: #424646;
+            display: block;
+            width: 100%;
+            height: 54px;
+            border: 1px solid $color-secondary;
+            text-align: center;
+            border-radius: 8px;
+            font-family: $font-opensans;
+            font-size: 20px;
+            resize: none;     
+            padding-top: 15px;       
+
+            .c-hero--multiple & {
+                height: 50px;
+                font-size: 16px;
+                @include mq($from: desktop) {
+                    height: 54px;
+                    font-size: 18px;
+                }
+            }
+            @include mq($from: desktop) {
+                height: 54px;
+                width: 160px;
+                font-size: 18px;
+                .c-hero--multiple & {
+                    width: 160px;
+                }
+            }
+        }
+
+        &__controls {
+            //margin-top: 18px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            width: 100%;
+            max-width: 220px;
+            margin: 0px auto 0;
+
+            .c-hero--multiple & {
+                //margin: 18px 0 0;
+                max-width: initial;
+                flex-direction: row;
+            }
+
+            @include mq($from: desktop) {
+                margin-top: 0;
+                max-width: initial;
+                flex-direction: row;
+            }
+        }
+
+        &__submit {
+            margin-top: 29px;
+            width: 100%;
+            height: 54px;
+            background-color: $color-primary;
+            text-align: center;
+            color: $color-white;
+            font-weight: 700;
+            font-family: $font-opensans;
+            font-size: 20px;
+            border-radius: 38px;
+            .c-hero--multiple & {
+                width: calc(100% - 100px);
+                height: 50px;
+                font-size: 16px;
+                max-width: 240px;
+                @include mq($from: desktop) {
+                    height: 54px;
+                    font-size: 22px;
+                }
+            }
+            @include mq($from: desktop) {
+                font-size: 22px;
+                height: 54px;
+                width: calc(100% - 170px);
+            }
+
+            & img {
+                display: none;
+                width: 30px;
+                height: auto;
+                vertical-align: middle;
+
+                .js-form--loading & {
+                    display: inline-block;
+                }
+            }
+
+            .js-form--loading & {
+                opacity: 0.6;
+                pointer-events: none;
+            }
+        }
+
+        label.js-form-error {
+            font-weight: 600;
+            font-size: 14px;
+            color: $color-red;
+            font-family: $font-opensans;
+
+            @include mq($from: desktop) {
+                display: block;
+                width: 200%;
+                margin-top: 6px;
+            }
+            .c-hero--multiple & {
+                width: 200%;
+                display: block;
+            }
+        }
+        &__more-products {
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+
+
+// Standardise some UI treatments.
+
+$global-radius: 8px !default;
+$global-box-shadow:  0px 6px 30px rgba(0, 0, 0, 0.08);
+$hover-box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.08);
+$global-transition:  all 0.2s ease, outline 0s;

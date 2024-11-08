@@ -1,0 +1,136 @@
+.c-thanks {
+    font-family: $font-opensans;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    @include mq($from: desktop) {
+        font-size: 20px;
+        padding-bottom: 0px;
+        min-height: calc(100vh - 143px);
+    }
+    &__wrapper {
+        padding-top: 22px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include mq($from: 600px) {
+            padding-top: 62px;
+        }
+
+    }
+    &__container{
+        display: flex;
+    }
+    &__image{
+        @include mq($until: desktop) {
+            display: none;
+        }
+        @include mq($from: desktop) {
+            width: 373px;
+        }
+    }
+    &__content{
+        @include mq($from: desktop) {
+            padding: 0 0 0 80px;
+        }
+    }
+
+    &__h1{
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        @include mq($from: desktop) {
+            font-size: 32px;
+        }
+    }
+    &__subtitle{
+        font-size: 24px;
+        font-weight: 400;
+        @include mq($from: desktop) {
+            font-size: 32px;
+        }
+    }
+    &__p{
+        margin: 0 0 35px 0;
+        text-align: center;
+        @include mq($from: desktop) {
+            margin: 0 0 60px 0;
+        }
+    }
+    &__ul{
+        font-size: 18px;
+        font-weight: 400;
+        list-style: none;
+        margin: 42px 0 0 0;
+        padding: 0 0 0 120px;
+        @include mq($from: desktop) {
+            font-size: 22px;
+            padding: 0 0 0 127px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            margin: 0 0 52px 0;
+            height: 100px;
+            position: relative;
+            width: 200px;
+            @include mq($from: 500px) {
+                width: initial;
+            }
+            span{
+                color: $color-primary;
+                font-size: 40px;
+                left: -91px;
+                position: absolute;
+                top: 10px;
+                @include mq($from: desktop) {
+                    left: -98px;
+                }
+            }
+            &::before{
+                border: 2px solid $color-primary;
+                border-radius: 42px;
+                content: '';
+                display: inline-block;
+                height: 84px;
+                left: -120px;
+                position: absolute;
+                top: 0;
+                width: 84px;
+                @include mq($from: desktop) {
+                    left: -127px;
+                }
+            }
+            &::after{
+                content: '';
+                border-right: 1px dashed #000;
+                height: 66px;
+                left: -81px;
+                position: absolute;
+                bottom: -51px;
+                @include mq($from: desktop) {
+                    left: -86px;
+                }
+            }
+            &:last-child{
+                &::after{
+                    display:  none;
+                }
+            }
+        }
+    }
+    &__rrss{
+        font-size: 18px;
+        text-align: center;
+        @include mq($from: desktop) {
+            font-size: 22px;
+        }
+        a{
+            display: inline-block;
+            margin: 0 8px;
+            width: 36px;
+            &.instagram{}
+            &.facebook{}
+            &.youtube {}
+        }
+    }
+}

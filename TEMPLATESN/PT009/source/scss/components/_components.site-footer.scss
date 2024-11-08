@@ -1,0 +1,64 @@
+.c-footer {
+    background-color: #626262;
+    color: $color-white;
+    padding: 20px 0 ;
+    margin-top: 40px;
+    font-size: 13px;
+    text-align: center;
+    
+    @include mq($from: desktop) {
+        text-align: left;
+        font-size: 14px;
+    }
+    @include mq($from: desktop) {
+        margin-top: 63px;
+        padding: 16px 0 ;
+    }
+
+    &__legals {
+
+        @include mq($from: desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__wrapper {
+        @include mq($from: desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__legal {
+        margin: 0;
+
+        a {
+            text-decoration: underline;
+            color: $color-white;
+            font-weight: 600;
+        }
+    }
+
+    &__links {
+        margin: 20px 0 0 0;
+        @include mq($from: desktop) {
+            margin: 0;
+        }
+        a {
+            text-decoration: underline;
+            color: $color-white;
+            position: relative;
+            font-weight: 600;
+
+            &::before {
+                content: '|';
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            &:first-of-type::before {
+                display: none;
+            }
+        }
+    }
+}

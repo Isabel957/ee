@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On    # Turn on the rewriting engine
+	RewriteCond %{HTTP:X-Forwarded-Proto} =http
+	RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]    
+	RewriteRule    ^error/?$    error.php    [NC,L]
+	RewriteRule    ^thanks/?$  thanks.php    [NC,L]
+	RewriteRule    ^form-lp/?$  form-lp.php    [NC,L]
+	RewriteRule    ^form-lp-dev/?$  form-lp-dev.php    [NC,L]
+	RewriteRule    ^--info/?$    --info.php    [NC,L]
+</IfModule>

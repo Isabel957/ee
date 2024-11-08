@@ -1,0 +1,13 @@
+include ../includes/config
+include ../includes/helpers
+header.c-header
+    .c-header__wrapper.o-wrapper.o-wrapper--large 
+        .c-header__brand
+            a(href='https://www.insureone.com/', target='_blank', rel='noopener'): img(src='images/components/site-header/logo-io.svg', alt=brand.name+' logo', width='69', height='29')
+        img.c-header__logo--omni(src="images/components/site-header/logo-visions.svg", alt="Visions Federal Credit Union Logo", width="80", height="19")
+        a.c-phone-header(href='tel:{phone-number}')
+            +iconSvg('icon-phone', 'c-phone-header__icon')
+            .c-phone-header__content
+                .c-phone-header__text.c-phone-header__text--desktop ¿Tiene alguna pregunta? #[br] Llámenos al
+                .c-phone-header__text.c-phone-header__text--mobile Llámenos
+                .c-phone-header__number {phone-number}

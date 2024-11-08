@@ -1,0 +1,405 @@
+- var brand = 'insureone';
+//- freeway | insureone | vernfonk | ssb | usagencies | costuless | bajaauto | oasis
+- var language = 'es-US';
+//- en-US | es-US
+- var rater = 'TURBO';
+//- LMS2 | LMS
+
+- var amp = false;
+
+- var buttonText = 'Get free quote';
+
+if brand == 'other'
+    -
+        var brand = {
+            name: '#',
+            url: '#',
+            gtm: '#',
+            languageForm: '#',
+            termsOfUse: '#',
+            privacyPolicy: '#',
+            eSign: '#',
+            affiliateDisclosure: '#',
+            externalMarketingPartners: '#',
+            legalName: '#'
+        }
+
+else if brand == 'freeway'
+    if language == 'en-US'
+        -
+            var brand = {
+                name : 'Freeway Insurance',
+                url: 'https://www.freewayinsurance.com/',
+                gtm : 'GTM-5RR3LJ',
+                languageForm: 'E',
+                termsOfUse: 'https://www.freewayinsurance.com/terms-of-use/',
+                privacyPolicy: 'https://www.freewayinsurance.com/privacy-policy/',
+                eSign: 'https://www.freewayinsurance.com/e-sign_disclaimer/',
+                affiliateDisclosure: 'https://www.freewayinsurance.com/affiliate-disclosure/',
+                externalMarketingPartners: 'https://www.freewayinsurance.com/external-marketing-partners/',
+                legalName: 'Freeway Insurance'
+            }
+    else if language == 'es-US'
+        -
+            var brand = {
+                name : 'Freeway Insurance',
+                url: 'https://www.freewayseguros.com/',
+                gtm : 'GTM-5RR3LJ',
+                languageForm: 'S',
+                termsOfUse: 'https://www.freewayseguros.com/condiciones-de-uso/',
+                privacyPolicy: 'https://www.freewayseguros.com/politicas-de-privacidad/',
+                eSign: 'https://www.freewayseguros.com/e-sign/',
+                affiliateDisclosure: 'https://www.freewayseguros.com/divulgacion-de-empresas-afiliadas/',
+                externalMarketingPartners: 'https://www.freewayseguros.com/socios-externos-de-marketing/',
+                legalName: 'Freeway Insurance'
+            }
+
+else if brand == 'insureone'
+    if language == 'en-US'
+        -
+            var brand = {
+                name : 'Insure One',
+                url: 'https://www.insureone.com',
+                gtm : 'GTM-NNFWW5',
+                languageForm: 'E',
+                termsOfUse: 'https://www.insureone.com/terms-of-use/',
+                privacyPolicy: 'https://www.insureone.com/privacy-policy/',
+                eSign: 'https://www.insureone.com/e-sign-disclaimer/',
+                affiliateDisclosure: 'https://www.insureone.com/affiliate-disclosure/',
+                externalMarketingPartners: 'https://www.insureone.com/external-marketing-partners',
+                legalName: 'InsureOne Insurance'
+            }
+
+else if brand == 'vernfonk'
+    if language == 'en-US'
+        -
+            var brand = {
+                name : 'Vern Fonk',
+                url: 'http://vernfonk.com/',
+                gtm : 'GTM-TZLCVNG',
+                languageForm: 'E',
+                termsOfUse: 'https://www.vernfonk.com/terms-of-use/',
+                privacyPolicy: 'https://www.vernfonk.com/privacy-policy/',
+                eSign: 'https://www.vernfonk.com/e-sign/',
+                affiliateDisclosure: 'https://www.vernfonk.com/affiliated-companies/',
+                externalMarketingPartners: 'https://www.vernfonk.com/external-marketing-partners/',
+                legalName: 'Vern Fonk Insurance'
+            }
+
+else if brand == 'ssb'
+    if language == 'es-US'
+        -
+            var brand = {
+                name : 'Seguro sin Barreras',
+                url: 'https://www.segurossinbarreras.com/',
+                gtm : 'GTM-WXL6K7',
+                languageForm: 'S',
+                termsOfUse: 'https://www.segurossinbarreras.com/blog/condiciones-de-uso/',
+                privacyPolicy: 'https://www.segurossinbarreras.com/blog/politicas-de-privacidad/',
+                eSign: 'https://www.segurossinbarreras.com/blog/e-sign/',
+                affiliateDisclosure: 'https://www.segurossinbarreras.com/blog/divulgacion-de-empresas-afiliadas/',
+                externalMarketingPartners: 'https://www.segurossinbarreras.com/blog/socios-externos-de-marketing/',
+                legalName: 'Seguros sin Barreras Insurance'
+            }
+
+else if brand == 'usagencies'
+    if language == 'en-US'
+        -
+            var brand = {
+                name : 'USAgencies',
+                url: 'https://www.usagencies.com/',
+                gtm : 'GTM-TC9VGWK',
+                languageForm: 'E',
+                termsOfUse: 'https://www.usagencies.com/terms-of-use/',
+                privacyPolicy: 'https://www.usagencies.com/privacy-policy',
+                eSign: 'https://www.usagencies.com/e-sign',
+                affiliateDisclosure: 'https://www.usagencies.com/affiliate-disclosure/',
+                externalMarketingPartners: 'https://www.usagencies.com/external-marketing-partners',
+                legalName: 'USAgencies'
+            }
+
+else if brand == 'costuless'
+    if language == 'en-US'
+        -
+            var brand = {
+                name : 'CostULess',
+                url: 'https://costulessdirect.com/',
+                gtm : 'GTM-N94S72',
+                languageForm: 'E',
+                termsOfUse: 'https://www.costulessdirect.com/terms-of-use/',
+                privacyPolicy: 'https://www.costulessdirect.com/privacy-policy/',
+                eSign: 'https://www.costulessdirect.com/e-sign/',
+                affiliateDisclosure: 'https://www.costulessdirect.com/affiliate-disclosure/',
+                externalMarketingPartners: 'https://www.costulessdirect.com/external-marketing-partners/',
+                legalName: 'Sacramento Auto Insurance'
+            }
+    else if language == 'es-US'
+        -
+            var brand = {
+                name : 'CostULess',
+                url: 'https://www.costulessseguros.com/',
+                gtm : 'GTM-PZD7RL',
+                languageForm: 'S',
+                termsOfUse: 'https://www.costulessseguros.com/terminos-de-uso/',
+                privacyPolicy: 'https://www.costulessseguros.com/politicas-de-privacidad/',
+                eSign: '',
+                affiliateDisclosure: 'https://www.costulessseguros.com/declaracion-de-afiliacion/',
+                externalMarketingPartners: 'https://www.costulessseguros.com/socios-externos-de-marketing',
+                legalName: 'Sacramento Auto Insurance'
+            }
+
+else if brand == 'bajaauto'
+    if language == 'en-US'
+        -
+            var brand = {
+                name : 'Baja Auto Insurance',
+                url: 'https://www.bajaautoinsurance.com/',
+                gtm : 'GTM-K82L2TP',
+                languageForm: 'E',
+                termsOfUse: 'https://www.bajaautoinsurance.com/terms-of-use/',
+                privacyPolicy: 'https://www.bajaautoinsurance.com/privacy-policy/',
+                eSign: 'https://www.bajaautoinsurance.com/e-sign/',
+                affiliateDisclosure: 'https://www.bajaautoinsurance.com/affiliate-disclosure/',
+                externalMarketingPartners: 'https://www.bajaautoinsurance.com/external-marketing-partners/',
+                legalName: 'Baja Auto Insurance '
+            }
+
+else if brand == 'oasis'
+    if language == 'en-US'
+        -
+            var brand = {
+                name : 'Oasis Insurance',
+                url: 'https://www.bajaautoinsurance.com/',
+                gtm : 'GTM-59CDPQB',
+                languageForm: 'E',
+                termsOfUse: 'https://www.oasisinsurance.com/terms-of-use/',
+                privacyPolicy: 'https://www.oasisinsurance.com/privacy-policy/',
+                eSign: 'https://www.oasisinsurance.com/e-sign-terms-consent-electronic-records-electronic-signatures/',
+                affiliateDisclosure: 'https://www.oasisinsurance.com/affiliated-companies/',
+                externalMarketingPartners: 'https://www.oasisinsurance.com/external-marketing-partners/',
+                legalName: 'Freeway Insurance Services of the Southwest'
+            }
+
+if language == 'en-US'
+    - var communicationConsent = 'By clicking the “'+buttonText+'” button below, I agree to the '+brand.legalName+' <a href='+brand.privacyPolicy+' target="_blank" rel="noopener">Privacy Policy</a> and <a href='+brand.termsOfUse+' target="_blank" rel="noopener">Terms of Use</a>, and I give consent to share my information with '+brand.legalName+'’s <a href='+brand.affiliateDisclosure+' target="_blank" rel="noopener">Affiliates</a>, <a href='+brand.externalMarketingPartners+' target="_blank" rel="noopener">External Marketing Partners</a>, and their successors and assigns. For all of these, I also give my express written consent to be contacted at the phone number provided above for marketing purposes by call, text, or automated telephone dialing system, including with an artificial or prerecorded voice. I understand that I am providing this consent even if my telephone number is currently listed on a federal, state, internal, or corporate Do-Not-Call list. I understand that I do not have to agree to receive these types of calls or text messages as a condition of purchasing any goods or services.';
+
+else if language == 'es-US'
+    - var communicationConsent = 'Al hacer clic en el botón de “'+buttonText+'” abajo, yo acepto la <a href='+brand.privacyPolicy+' target="_blank" rel="noopener">Política de Privacidad</a> y las <a href='+brand.termsOfUse+' target="_blank" rel="noopener">Condiciones de Uso</a>, y doy mi consentimiento para compartir mi información con los <a href='+brand.affiliateDisclosure+' target="_blank" rel="noopener">Afiliados</a> y <a href='+brand.externalMarketingPartners+' target="_blank" rel="noopener">Socios Externos de Mercadotecnia</a> de '+brand.legalName+', y con sus sucesores y cesionarios. Para todos los anteriores, también doy mi consentimiento expreso por escrito para ser contactado al número de teléfono proporcionado para fines de marketing por medio de llamada, mensaje de texto o servicio de marcación automática telefónica incluyendo con una voz artificial o grabada por adelantado. Entiendo que estoy otorgando este consentimiento aún si mi número de teléfono se encuentra actualmente registrado en una lista federal, estatal, local o corporativa de números que no desean ser contactados. Entiendo que no tengo que aceptar recibir este tipo de llamadas o mensajes de texto como condición para poder adquirir cualquier artículo o servicio.';
+
+
+if rater == 'LMS2'
+    -
+        var form = {
+            gender : {
+                name: 'gender',
+            },
+            genderOptions: {
+                //- value : text  
+                'male': 'Male',
+                'female': 'Female',
+                'nonBinary': 'Non-binary'
+            },
+            firstName: {
+                name: 'fname',
+            },
+            lastName: {
+                name: 'lname',
+            },
+            phone: {
+                name: 'phone',
+            },
+            email: {
+                name: 'email',
+            },
+            zipcode: {
+                name: 'zipcode',
+            },
+            communicationsConsent: {
+                name: 'comunications-consent',
+                value: '3'
+            },
+            birthday: {
+                name: 'birth_date'
+            },
+            maritalStatus: {
+                name: 'marital_status'
+            },
+            maritalStatusOptions: {
+                //- value : text           
+                'single': 'Single',
+                'married': 'Married',
+                'divorced': 'Divorced',
+            },
+            street: {
+                name: 'street'
+            },
+            state: {
+                name: 'state'
+            },
+            city: {
+                name: 'city'
+            },
+            hear: {
+                name: 'how_know_us'
+            },
+            hearOptions: {
+                //- value : text           
+                'friend': 'Friend',
+                'email': 'Email',
+                'other': 'Other',
+            },
+            vin: {
+                name: 'vehicles[0][vin]'
+            },
+            selectYear : {
+                name: 'vehicles[0][year]'
+            },
+            selectMake : {
+                name: 'vehicles[0][make]'
+            },
+            selectModel : {
+                name: 'vehicles[0][model]'
+            },
+            selectYearOptions: {
+                //- value : text 
+                '2019': '2019',          
+                '2018': '2018',
+                '2017': '20187'
+            },
+            selectMakeOptions: {
+                //- value : text           
+                'hyundai': 'Hyundai',
+                'hyundai': 'Hyundai',
+                'hyundai': 'Hyundai'
+            },
+            selectModelOptions: {
+                //- value : text           
+                'elantra': 'Elantra',
+                'elantra': 'Elantra',
+                'elantra': 'Elantra'
+            },
+
+        }
+
+if rater == 'LMS'
+    -
+        var form = {
+            gender : {
+                name: 'gender',
+            },
+            genderOptions: {
+                //- value : text  
+                'male': 'Male',
+                'female': 'Female',
+                'nonBinary': 'Non-binary'
+            },
+            firstName: {
+                name: 'first_name',
+            },
+            lastName: {
+                name: 'last_name',
+            },
+            phone: {
+                name: 'phone',
+            },
+            email: {
+                name: 'email',
+            },
+            zipcode: {
+                name: 'zipcode',
+            },
+            communicationsConsent: {
+                name: 'communications_consent',
+                value: '1'
+            },
+            birthday: {
+                name: 'birthday'
+            },
+            maritalStatus: {
+                name: 'maritalStatus'
+            },
+            maritalStatusOptions: {
+                //- value : text           
+                'single': 'Single',
+                'married': 'Married',
+                'divorced': 'Divorced',
+            },
+            street: {
+                name: 'street'
+            },
+            state: {
+                name: 'state'
+            },
+            city: {
+                name: 'city'
+            },
+            hear: {
+                name: 'hear'
+            },
+            hearOptions: {
+                //- value : text           
+                'friend': 'Friend',
+                'email': 'Email',
+                'other': 'Other',
+            },
+            vin: {
+                name: 'vin[0]'
+            },
+            selectYear : {
+                name: 'year[0]'
+            },
+            selectMake : {
+                name: 'make[0]'
+            },
+            selectModel : {
+                name: 'model[0]'
+            },
+            selectYearOptions: {
+                //- value : text 
+                '2019': '2019',          
+                '2018': '2018',
+                '2017': '20187'
+            },
+            selectMakeOptions: {
+                //- value : text           
+                'hyundai': 'Hyundai',
+                'hyundai': 'Hyundai',
+                'hyundai': 'Hyundai'
+            },
+            selectModelOptions: {
+                //- value : text           
+                'elantra': 'Elantra',
+                'elantra': 'Elantra',
+                'elantra': 'Elantra'
+            },
+
+        }
+
+if rater == 'TURBO'
+    -
+        var form = {
+            gender : {
+                name: 'gender',
+            },
+            genderOptions: {
+                //- value : text  
+                'male': 'Male',
+                'female': 'Female',
+                'nonBinary': 'NonBinary'
+            },
+            firstName: {
+                name: 'First_Name',
+            },
+            lastName: {
+                name: 'Last_Name',
+            },
+            phone: {
+                name: 'Phone',
+            },
+            email: {
+                name: 'Email',
+            },
+            zipcode: {
+                name: 'zipcode',
+            }
+        }
